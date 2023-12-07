@@ -31,6 +31,6 @@ public class GunController : MonoBehaviour
         bullet.GetComponent<Rigidbody>().mass = bullet.GetComponent<BulletCollision>().bulletMass;
 
         // Shoot the bullet forward
-        bullet.GetComponent<Rigidbody>().velocity = transform.position * bullet.GetComponent<BulletCollision>().bulletSpeed;
+        bullet.GetComponent<Rigidbody>().velocity = BulletSpawnPoint.forward * bullet.GetComponent<BulletCollision>().bulletSpeed;
     }
 }

@@ -19,7 +19,7 @@ public class BulletCollision : MonoBehaviour
     IEnumerator BulletDespawn()
     {
             // Wait for the specified interval before destroying object
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(0.5f);
 
         //destroy bullet
         Destroy(gameObject);

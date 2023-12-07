@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class playerController : MonoBehaviour
 {
-
     private PlayerInput controls;
     static public float moveSpeed = 10f;
     private Vector3 velocity;
@@ -15,6 +14,7 @@ public class playerController : MonoBehaviour
     public float distanceToGround = 0.4f;
     public LayerMask groundMask;
     private bool isGrounded;
+
 
     private void Awake()
     {
@@ -41,7 +41,7 @@ public class playerController : MonoBehaviour
         isGrounded = Physics.CheckSphere(ground.position, distanceToGround, groundMask);
 
         if (isGrounded && velocity.y < 0)
-        { 
+        {
             velocity.y = -2f;
         }
         velocity.y += gravity * Time.deltaTime;
